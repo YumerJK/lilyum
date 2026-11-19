@@ -65,6 +65,13 @@ svg#s.run{transform-origin:50% 97%;will-change:transform;animation:sway 6s 9s ea
 @keyframes fly{0%{transform:translate(0,0) rotate(-12deg)}33%{transform:translate(var(--a),var(--b)) rotate(14deg)}66%{transform:translate(var(--c),var(--e)) rotate(-10deg)}100%{transform:translate(var(--f),var(--g)) rotate(12deg)}}
 .run .stem2{animation:grow 1.8s 4.2s ease-out forwards}
 .run .plant{animation-delay:9.5s}
+#to{position:fixed;left:6%;top:calc(env(safe-area-inset-top,0px) + 4%);display:flex;align-items:center;gap:10px;opacity:0;animation:toin 1.6s 1.2s ease-out forwards;pointer-events:none;font-family:'Lora',Georgia,serif;font-style:italic;color:#ffeef5;text-shadow:0 0 14px rgba(255,130,180,.6)}
+#to b{display:block;font-size:clamp(19px,5.2vw,28px);font-weight:500;line-height:1.1}
+#to small{display:block;font-size:clamp(12px,3.2vw,16px);opacity:.8;margin-top:3px}
+@keyframes toin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.ear{transform-box:fill-box;transform-origin:50% 100%;animation:ew 1.2s ease-in-out infinite alternate}
+.ear.r{animation-delay:-.6s}
+@keyframes ew{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
 @media(max-width:600px){.petal{filter:none}#moon{right:6%}body{touch-action:manipulation}}
 </style>
 </head>
@@ -126,6 +133,7 @@ svg#s.run{transform-origin:50% 97%;will-change:transform;animation:sway 6s 9s ea
 </svg>
 <svg id="gr"></svg>
 <div id="msg"></div>
+<div id="to"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><g class="ear"><ellipse cx="14" cy="11" rx="4.5" ry="11" transform="rotate(-16 14 11)" fill="#a9afc2"/><ellipse cx="14" cy="12" rx="2" ry="7" transform="rotate(-16 14 12)" fill="#ffb8d3"/></g><g class="ear r"><ellipse cx="34" cy="11" rx="4.5" ry="11" transform="rotate(16 34 11)" fill="#a9afc2"/><ellipse cx="34" cy="12" rx="2" ry="7" transform="rotate(16 34 12)" fill="#ffb8d3"/></g><ellipse cx="24" cy="28" rx="13" ry="14" fill="#a9afc2"/><ellipse cx="24" cy="36" rx="8.5" ry="6.5" fill="#f1e8e0"/><circle cx="21" cy="36" r="1.2" fill="#6b6479"/><circle cx="27" cy="36" r="1.2" fill="#6b6479"/><circle cx="18" cy="26" r="2.2" fill="#2a1d3a"/><circle cx="30" cy="26" r="2.2" fill="#2a1d3a"/><circle cx="18.7" cy="25.3" r=".7" fill="#fff"/><circle cx="30.7" cy="25.3" r=".7" fill="#fff"/><circle cx="13.5" cy="32" r="2.6" fill="#ff9ec4" opacity=".5"/><circle cx="34.5" cy="32" r="2.6" fill="#ff9ec4" opacity=".5"/></svg><div><b>Eşek Nisa</b><small>hehhehhehhehehheh</small></div></div>
 <script>
 const MSG="Üzgünüm, şu an elimden bu geliyor. Bazı ailevi nedenlerden dolayı alamadım, yoksa sana çiçek almak çok isterdim. Yapabildiğimin en iyisi bu, umarım beğenirsin.";
 const $=id=>document.getElementById(id),R=Math.random;
